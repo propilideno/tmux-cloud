@@ -1,3 +1,12 @@
+## Supported CSP
+
+| CSP | File | Requirements |
+| -- | -- | -- |
+| Azure | azure.tmux | azcli |
+| AWS | - | - |
+| GCP | - | - |
+| Alibaba | - | - |
+
 ## Installation
 
 ### With TPM
@@ -15,5 +24,5 @@ set -g status-right ""
 # .
 # .
 # append azure status to the right of the status bar
-set -ga status-right "#(/bin/bash ~/.tmux/plugins/tmux-cloud/azure.tmux) "
+set -ga status-right " #(/bin/bash ~/.tmux/plugins/tmux-cloud/azure.tmux) "
 ```
