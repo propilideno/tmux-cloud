@@ -1,9 +1,15 @@
 #!/bin/bash
 
-ACCOUNT_INFO=$(az account show 2> /dev/null)
-if [[ $? -ne 0 ]]; then
-    echo "no subscription"
-    exit
+PROFILE_FILE="~/.azure/azureProfile.json"
+
+if [ -f $PROFILE_FILE ]; then
+	ACCOUNT_INFO=$(cat $PROFILE_FILE | jq '.subscriptions.[] | select(.isDefault == true)')
+else
+	ACCOUNT_INFO=$(az account show 2> /dev/null)
+	if [[ $? -ne 0 ]]; then
+		echo "no subscription"
+		exit
+	fi
 fi
 
 SUBSCRIPTION_ID=$(echo "$ACCOUNT_INFO" | jq ".id" -r)
