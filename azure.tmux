@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PROFILE_FILE="~/.azure/azureProfile.json"
+PROFILE_FILE="$HOME/.azure/azureProfile.json"
 
 if [ -f $PROFILE_FILE ]; then
 	ACCOUNT_INFO=$(cat $PROFILE_FILE | jq '.subscriptions.[] | select(.isDefault == true)')
