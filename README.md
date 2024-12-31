@@ -1,7 +1,8 @@
 # Tmux Cloud
 
-## Supported CSP
 <img src="./img/statusbar.png" style="margin: 0 auto" />
+
+## Supported CSP
 
 | CSP | File | Requirements |
 | -- | -- | -- |
