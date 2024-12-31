@@ -2,6 +2,14 @@
 
 <img src="./img/statusbar.png" style="margin: 0 auto" />
 
+## Requirements
+
+jq - Command-line JSON processor
+```bash
+sudo apt install jq
+sudo pacman -S jq
+```
+
 ## Supported CSP
 
 | CSP | File | Requirements |
